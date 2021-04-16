@@ -1,23 +1,25 @@
 var Username
 var RollNumber
 var score = 0;
-var attempt=0;
-var displayname;
+var attempt=0; 
+var displayname
 function saveLogin(){
     // alert("hi")
     // if (typeof(Storage) !== "undefined") {
     Username=document.getElementById("uname").value
     RollNumber=document.getElementById("rollnumber").value
     localStorage.setItem("Username", Username);
-    localStorage.setItem("RollNumebr", RollNumber);
+    localStorage.setItem("RollNumber", RollNumber);
     localStorage.setItem("score", score);
     alert(Username)
     alert(RollNumber)
+    console.log(Username)
+    console.log(RollNumber)
+    console.log(score)
  
 // }
 }
 // if
-
 
 function nextPage(qid, name, type, page)
 {
@@ -35,7 +37,7 @@ function nextPage(qid, name, type, page)
             }
         }
     }
-}
+
 
 
 if(type == "radio" && qid == "q2"){
@@ -75,10 +77,6 @@ function setScore(score){
     localStorage.setItem("score", score)
 }
 
-displayname = localStorage.getItem("Username")
-displayroll = localStorage.getItem("RollNumber")
-displayscore = localStorage.getItem("score")
-console.log(displayname, score, displayroll)
-document.getElementById("setUname").innerHTML = displayname + " - "+displayroll
-document.getElementById("result").innerHTML="Score: "+ displayscore
 
+}
+ 
